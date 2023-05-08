@@ -1,10 +1,10 @@
 # Pollen Project - Projeto Final de Formação AfroTech-BEES
 
-Estrutura do projeto:
+##Estrutura do projeto:
 
 Legenda: (P) Pagina (C) Componente (E) Elemento
 
-(P)Pagina Inicial
+###(P)Pagina Inicial
 
 (C)Header
 (E)Logo
@@ -28,7 +28,7 @@ Legenda: (P) Pagina (C) Componente (E) Elemento
 (E)Valor
 (E)Botão Carrinho
 --
-(P)Minha Conta
+###(P)Minha Conta
 
 (C)Header (copy)
 
@@ -52,7 +52,7 @@ Legenda: (P) Pagina (C) Componente (E) Elemento
 (E)Como Acumular polen
 (E)Como transferir polen
 --
-(P)Detalhe Produto
+###(P)Detalhe Produto
 (C)Detalhe Produto
 (E)Foto
 (E)descrição
@@ -64,7 +64,7 @@ Legenda: (P) Pagina (C) Componente (E) Elemento
 (E)Retirar Escritorio
 (E)Receber em casa (API CEP - hover input cep para calculo?)
 --
-(P)Detalhes pedido
+###(P)Detalhes pedido
 (C)Card produto add
 (E)Foto
 (E)Nome
