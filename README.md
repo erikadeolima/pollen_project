@@ -1,8 +1,8 @@
 # Pollen Project - Projeto Final de Formação AfroTech-BEES
 
---
-
 ## Estrutura do projeto:
+
+---
 
 **Legenda:**
 
@@ -11,6 +11,8 @@
 > > **(C) Componente**
 > >
 > > > **(E) Elemento**
+
+---
 
 > (P)Pagina Inicial
 >
@@ -39,13 +41,13 @@
 > > > (E)Nome Produto/Kit
 > > > (E)Valor
 > > > (E)Botão Carrinho
-
---
-
+>
 > (P)Minha Conta
 >
 > > (C)Header (copy)
+> >
 > > (C)Saldo polen
+> >
 > > (C)Histórico pedidos
 > >
 > > > (E)Texto Histórico
@@ -60,9 +62,7 @@
 > > > (E)Campo email(input)
 > > > (E)Campo polens(input)
 > > > (E)Botão Enviar Polen
-
---
-
+>
 > (P)Saiba mais
 >
 > > (C)Header(copy)
@@ -70,9 +70,7 @@
 > > > (E)O que é o site {Polen}
 > > > (E)Como Acumular polen
 > > > (E)Como transferir polen
-
---
-
+>
 > (P)Detalhe Produto
 >
 > > (C)Detalhe Produto
@@ -86,9 +84,7 @@
 > > > (E)Envio
 > > > (E)Retirar Escritorio
 > > > (E)Receber em casa (API CEP - hover input cep para calculo?)
-
---
-
+>
 > (P)Detalhes pedido
 >
 > > (C)Card produto add
