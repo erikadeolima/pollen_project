@@ -29,12 +29,9 @@
 > > > (E)Card informativo
 > > > (E)Título
 > > > (E)Saiba mais (link)
-
---
-
-> (P)Minha Conta
->
+> >
 > > (C)Área de Produtos
+> >
 > > (C)9 Cards de podutos
 > >
 > > > (E)Logo de Favoritar
