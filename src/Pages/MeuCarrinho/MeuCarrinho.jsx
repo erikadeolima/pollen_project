@@ -51,6 +51,7 @@ function MeuCarrinho() {
 
             <label for="quantidadePólens">Quantos pólens deseja enviar?</label>
             <input type="number" name="" id="quantidadePólens" class='input' />
+            <button>Enviar</button>
             
             
             </div>
