@@ -6,4 +6,11 @@
 
 .tituloPedidos{
     padding-left: 50px;
+    
+}
+
+.tableCarrinho{
+    margin: 0px 100px ;
+    
+    width: 800px;
 }
