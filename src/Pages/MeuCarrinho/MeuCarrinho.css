@@ -1,0 +1,9 @@
+.tituloPolens{
+    display: flex;
+    justify-content:right;
+    padding-right: 50px;
+}
+
+.tituloPedidos{
+    padding-left: 50px;
+}

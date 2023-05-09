@@ -1,0 +1,17 @@
+
+.sectionHeader {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+a{
+    text-decoration: none;
+}
+
+#logo {
+    margin-top: -25px;
+    width: 150px;
+
+}

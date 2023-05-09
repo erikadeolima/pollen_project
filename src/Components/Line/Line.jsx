@@ -3,7 +3,7 @@ import './Line.css';
 
 function Line() {
     return(
-        <div></div>
+        <hr className="line"/>
     );
 }
 
