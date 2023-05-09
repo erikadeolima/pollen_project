@@ -31,7 +31,7 @@ header div {
 }
 
 .menu-itens p {
-    margin: 0 1em;
+    margin-left: 1em;
     color: #000;
     font-size: 1.5em;
     font-family: 'Roboto', sans-serif;
