@@ -1,18 +1,30 @@
-import React from "react";
+import React from 'react';
 import './Header.css';
+import { Link } from 'react-router-dom';
 
-function Header(props) {
+import logo from '../../Assets/Logo/logo-polen.png';
+import { AiOutlineShoppingCart } from "react-icons/ai";
+
+function Header() {
     return(
         <header>
-            <section className="sectionHeader">
-            <img id="logo" src= {props.logo} alt="fotoLogo" />
-            <a id="nomeSite" href="./HomePage">{props.name} </a>
-            
-            <a id="minhaConta" href="./MinhaConta">{props.conta} </a>
-            <span className="iconeCarrinho"> {props.icone1} </span>
-            <a id="meuCarrinho" href="./MeuCarrinho">{props.carrinho} </a>
-            <a id="logout" href="./">{props.logout} </a>
-            </section>
+            <div>
+                <Link to="/">
+                    <img className="logo" src={logo} alt="Logo do site. Uma moeda amarela com a letra P e algumas abelhas" />
+                </Link>
+                <Link to="/" className='removeStyle'>
+                    <h1 className='nameSiteHeader'>Pólens</h1>
+                </Link>
+            </div>
+            <div className='menu-itens'>
+                <Link to="/MinhaConta" className='removeStyle'>
+                    <p className='font-md'>minha conta</p>
+                </Link>
+                <Link to="/MeuCarrinho" className='removeStyle'>
+                    {/* <AiOutlineShoppingCart /> */}
+                    <p className='font-md'>meu carrinho</p>
+                </Link>
+            </div>        
         </header>
     );
 }
