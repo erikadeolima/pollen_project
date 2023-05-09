@@ -41,7 +41,3 @@ header div {
 .menu-itens p:hover {
     border-bottom: 1px solid #000;
 }
-
-.removeStyle {
-    text-decoration: none;
-}
