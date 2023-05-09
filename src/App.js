@@ -12,14 +12,14 @@ import Sobre from './Pages/Sobre/Sobre';
 function App() {
   return (
     <div className="App">
-      <Header />
       <Router>
+        <Header />
         <Routes>
           <Route path='/' element={<Homepage />} />
-          <Route path='/meucarrinho' element={<MeuCarrinho />} />
-          <Route path='/minhaconta' element={<MinhaConta />} />
-          <Route path='/resumo' element={<Resumo />} />
-          <Route path='/sobre' element={<Sobre />} />
+          <Route path='/MeuCarrinho' element={<MeuCarrinho />} />
+          <Route path='/MinhaConta' element={<MinhaConta />} />
+          <Route path='/Resumo' element={<Resumo />} />
+          <Route path='/Sobre' element={<Sobre />} />
         </Routes>
       </Router>
     </div>
