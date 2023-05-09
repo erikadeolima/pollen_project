@@ -32,8 +32,9 @@ function MeuCarrinho() {
                 <label htmlFor="emailPresente">Digite o e-mail da pessoa que vai receber os pólens:</label>
                 <input type="e-mail" name="" id="emailPresente" className='input' />
 
-                <label htmlFor="quantidadePólens">Quantos pólens deseja enviar?</label>
-                <input type="number" name="" id="quantidadePólens" className='input' />
+                <label for="quantidadePólens">Quantos pólens deseja enviar?</label>
+                <input type="number" name="" id="quantidadePólens" class='input' />
+                <button>Enviar</button>
 
 
             </div>
