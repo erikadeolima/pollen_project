@@ -42,6 +42,9 @@ function Provider({ children }) {
     userName,
     pollenBalance,
     orderHistory,
+    getUserName,
+    getPollenBalance,
+    getOrderHistory,
     updateOrderHistory,
     updatePollenBalance
   };

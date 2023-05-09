@@ -1,63 +1,46 @@
-import React from 'react';
+import React, { useContext, useEffect } from 'react';
 import './MeuCarrinho.css';
 import Line from '../../Components/Line/Line';
+import Table from '../../Components/Table/Table';
+import storage from '../../Context/Context';
 
 function MeuCarrinho() {
-    return(
+    const { pollenBalance, getPollenBalance } = useContext(storage);
+
+    useEffect(() => {
+        getPollenBalance();
+    }, [])
+
+    return (
         <div className='MeuCarrinho'>
             <h3 className='tituloPolens'>
-                Você tem 10.000 pólens acumulados.
+                {`Você tem ${pollenBalance} pólens acumulados.`}
             </h3>
-            
-            <Line/>
-            <br/>
+            <Line />
+            <br />
             <p className='tituloPedidos'>
                 Veja aqui o seu histórico de pedidos
             </p>
-            <br/>
-            <table className='tableCarrinho'>
-                <tr>
-                    <td>Data do Pedido</td>
-                    <td>Produtos</td>
-                    <td> Custo</td>
-                    <td>Statos do Pedido</td>
-                </tr>
-                <tr>
-                    <td>20/02/2023</td>
-                    <td>Caneca Bees</td>
-                    <td>70 Pólens</td>
-                    <td>Entregue</td>
-                </tr>
-                <tr>
-                    <td>20/02/2023</td>
-                    <td>Caneca Bees</td>
-                    <td>70 Pólens</td>
-                    <td>Entregue</td>
-                </tr>
-                <tr>
-                    <td>20/02/2023</td>
-                    <td>Caneca Bees</td>
-                    <td>70 Pólens</td>
-                    <td>Entregue</td>
-                </tr>
-            </table>
-            
+            <br />
+
+            <Table page="meu_carrinho" />
+
             <p className='tituloTransfira'>
                 Não vai usar seus pólens? Transfira para outra pessoa! </p>
-            <br/>
+            <br />
             <div className='presente'>
-            <label for="emailPresente">Digite o e-mail da pessoa que vai receber os pólens:</label>
-            <input type="e-mail" name="" id="emailPresente" class='input' />
+                <label htmlFor="emailPresente">Digite o e-mail da pessoa que vai receber os pólens:</label>
+                <input type="e-mail" name="" id="emailPresente" className='input' />
 
-            <label for="quantidadePólens">Quantos pólens deseja enviar?</label>
-            <input type="number" name="" id="quantidadePólens" class='input' />
-            
-            
+                <label htmlFor="quantidadePólens">Quantos pólens deseja enviar?</label>
+                <input type="number" name="" id="quantidadePólens" className='input' />
+
+
             </div>
         </div>
-        
 
-        
+
+
     )
 };
 
