@@ -1,0 +1,36 @@
+.homepageBanner  {
+    width: 1200px;
+    height: 250px;
+    background-image: url("../../Assets/Banner/photo-office.png");
+    border-radius: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    box-shadow: -1px 10px 9px -10px rgba(0,0,0,0.75);
+}
+
+.bannerHomepageTxt {
+    position: absolute;
+    color: #FFF;
+    background-color: #000;
+    text-align: right;
+    padding: 0.8em;
+    margin-right: 1em;
+}
+
+.bannerHomepageTxt p {
+    text-transform: uppercase;
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.bannerHomepageTxt label {
+    color: #FFF;
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+}
+
+.bannerHomepageTxt label:hover {
+    border-bottom: 1px solid #FFF;
+}
+
