@@ -1,26 +1,31 @@
 import './App.css';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import Provider from './Context/Provider';
+
 import Header from './Components/Header/Header';
-import Logo from './Components/Header/Logo.png';
-import { HiShoppingCart } from "react-icons/hi";
-import './Pages/Sobre/Sobre';
-import Sobre from './Pages/Sobre/Sobre';
+
+import Homepage from './Pages/Homepage/Homepage';
 import MeuCarrinho from './Pages/MeuCarrinho/MeuCarrinho';
+import MinhaConta from './Pages/MinhaConta/MinhaConta';
+import Resumo from './Pages/Resumo/Resumo';
+import Sobre from './Pages/Sobre/Sobre';
 
 function App() {
   return (
-    <div className="App">
-      <Header
-      logo={Logo}
-      name= "Nome do Site"
-      conta= "Minha Conta"
-      icone1= {<HiShoppingCart/>}
-      carrinho= "Meu Carrinho"
-      logout= "logout"
-
-      />
-      <Sobre/>
-      <MeuCarrinho/>
-    </div>
+    <Provider>
+      <div className="App">
+        <Router>
+          <Header />
+          <Routes>
+            <Route path='/' element={<Homepage />} />
+            <Route path='/MeuCarrinho' element={<MeuCarrinho />} />
+            <Route path='/MinhaConta' element={<MinhaConta />} />
+            <Route path='/Resumo' element={<Resumo />} />
+            <Route path='/Sobre' element={<Sobre />} />
+          </Routes>
+        </Router>
+      </div>
+    </Provider>
   );
 }
 
