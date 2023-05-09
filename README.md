@@ -14,7 +14,7 @@
 
 ---
 
-> (P)Pagina Inicial
+> (P)Index
 >
 > > (C)Header
 > >
@@ -71,7 +71,7 @@
 > > > (E)Como Acumular polen
 > > > (E)Como transferir polen
 >
-> (P)Detalhe Produto
+> (P)meu-carrinho
 >
 > > (C)Detalhe Produto
 > >
@@ -85,7 +85,7 @@
 > > > (E)Retirar Escritorio
 > > > (E)Receber em casa (API CEP - hover input cep para calculo?)
 >
-> (P)Detalhes pedido
+> (P)resumo
 >
 > > (C)Card produto add
 > >
