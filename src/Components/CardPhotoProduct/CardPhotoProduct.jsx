@@ -3,7 +3,12 @@ import './CardPhotoProduct.css';
 
 function CardPhotoProduct() {
     return(
-        <div></div>
+        <div>
+
+
+
+            
+        </div>
     );
 }
 
