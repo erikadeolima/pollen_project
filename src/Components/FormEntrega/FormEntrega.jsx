@@ -4,7 +4,7 @@ import { useForm } from 'react-hook-form';
 
 function FormEntrega() {
 
-    const { register, handleSubmit, setValue } = useForm();
+    const { register, handleSubmit, setValue } = useForm();    
 
     const onSubmit = (e) => {
         console.log(e);
@@ -14,7 +14,7 @@ function FormEntrega() {
         const cep = e.target.value.replace(/\D/g, '');
         console.log(cep);
 
-        fetch('https://viacep.com.br/ws/${cep}/json/)').then(res => res.json()).then(data => {
+        fetch(`https://viacep.com.br/ws/${cep}/json/`).then(data => {
             console.log(data);
             setValue('endereco', data.logradouro);
             setValue('bairro', data.bairro)
@@ -26,7 +26,7 @@ function FormEntrega() {
     return (
         <form className='formulario-entrega' onSubmit={handleSubmit(onSubmit)}>
             <label>
-                <input type="number" placeholder='CEP'
+                <input type="text" placeholder='CEP'
                     {...register("cep")} onBlur={checkCEP} />
             </label>
 
