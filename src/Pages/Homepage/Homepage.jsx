@@ -6,9 +6,8 @@ import CardPhotoProduct from '../../Components/CardPhotoProduct/CardPhotoProduct
 function Homepage() {
 
     return (
-        <div>
+        <div className='mainContainer'>
             <Banner />
-            <CardPhotoProduct />
         </div>
     )
 };
