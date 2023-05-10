@@ -1,10 +1,9 @@
 const productsInfo = [
   {
     id: 1,
-    name: "caneca",
-    src: "endereçoimagem",
+    name: "agenda com caneta polén",
+    src: "../../assets/agenda",
     pollen: 50,
-    size: "p",
   },
   {
     id: 2,
