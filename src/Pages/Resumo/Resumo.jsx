@@ -1,5 +1,6 @@
 import React from 'react';
 import './Resumo.css';
+import FormEntrega from '../../Components/FormEntrega/FormEntrega';
 
 
 function Resumo() {
@@ -18,20 +19,7 @@ function Resumo() {
             
             <div>
                 <h3>Endereço para Entrega</h3>
-                <label htmlFor="CEP">CEP</label>
-                <input type="number" name="CEP" id="" />
-            </div>
-            <div className=''>
-                <label htmlFor="ruaBairro">Rua e Bairro</label>
-                <input type="text" name='ruaBairro' id='' />
-                <label htmlFor="numero">Número</label>
-                <input type="number" name="numero" id="" />
-                <label htmlFor="complemento">Complemento</label>
-                <input type="text" name='complemento' id='' />
-                <label htmlFor="cidade">Cidade</label>
-                <input type="text" name='cidade' id='' />
-                <label htmlFor="estado">Estado</label>
-                <input type="text" name='estado' id='' />
+                <FormEntrega/>
 
             </div>
 
