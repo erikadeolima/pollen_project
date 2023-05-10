@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
 import storage from './Context';
 import userInfo from '../untils/userInfo';
+import productsInfo from '../untils/productsInfo';
 
 function Provider({ children }) {
 
   const [userName, setUserName] = useState("");
   const [pollenBalance, setPollenBalance] = useState(0);
   const [orderHistory, setOrderHistory] = useState([]);
+  const [products, setProducts] = useState([]);
+  const [total, setTotal] = useState('0,00');
+  const [cart, setCart] = useState([]);
 
   const getUserName = () => {
     const user = userInfo.userName;
@@ -23,6 +27,11 @@ function Provider({ children }) {
     setOrderHistory(orderHistory);
   };
 
+  const getProducts = () => {
+    const products = productsInfo;
+    setProducts(products);
+  }
+
   const updatePollenBalance = (pollens) => {
     setPollenBalance(pollens);
   };
@@ -36,7 +45,40 @@ function Provider({ children }) {
       };
     }); */
   };
+  const getCartItem = () => {
+    const cartItens = JSON.parse(localStorage.getItem('cart'));
+    return cartItens;
+  };
 
+  const saveCartItem = (item) => {
+    localStorage.setItem('cart', JSON.stringify(item));
+  };
+
+  const newItem = (item) => {
+    const getCartProducts = getCartItem() || [];
+    const itemAlreadySave = getCartProducts.find(
+      (productItem) => productItem.productId === item.productId,
+    );
+    if (getCartProducts.length === 0) {
+      setCart([item]);
+      return saveCartItem([item]);
+    }
+
+    if (itemAlreadySave) {
+      getCartProducts.forEach((arrayItem) => {
+        if (arrayItem.productId === item.productId) {
+          arrayItem.quantity = item.quantity;
+          arrayItem.subTotal = item.subTotal;
+        }
+      });
+      setCart(getCartProducts);
+      saveCartItem(getCartProducts);
+    } else {
+      getCartProducts.push(item);
+      setCart(getCartProducts);
+      saveCartItem(getCartProducts);
+    }
+  };
 
   const context = {
     userName,
@@ -46,7 +88,14 @@ function Provider({ children }) {
     getPollenBalance,
     getOrderHistory,
     updateOrderHistory,
-    updatePollenBalance
+    updatePollenBalance,
+    getProducts,
+    products,
+    total,
+    setTotal,
+    cart,
+    setCart,
+    newItem
   };
 
   return (

@@ -7,12 +7,9 @@ function Table(props) {
 
     useEffect(() => {
         getOrderHistory();
-    }, [orderHistory])
+    }, [orderHistory]);
 
-
-
-
-    if (props.page === "meu_carrinho") {
+    if (props.page === "minha_conta") {
         return (
             <div>
                 <table className='tableCarrinho'>
@@ -25,7 +22,6 @@ function Table(props) {
                         </tr>
                     </thead>
                     <tbody>
-                        {console.log(orderHistory)}
                         {orderHistory.map((order) => {
                             return (
                                 <tr key={order.id}>

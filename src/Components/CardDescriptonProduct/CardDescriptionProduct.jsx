@@ -1,36 +1,38 @@
 import React from "react";
 import './CardDescriptionProduct.css';
 
-function CardDescriptionProduct() {
+function CardDescriptionProduct(props) {
     return (
         <div className="descriptionP">
             <div id="photoP">
-                <img src="#" alt="Foto do Produto" />
+                <img src={props.scr} alt="Foto do Produto" />
             </div>
             <div id="descricao">
-                <h3>Camiseta BEEs</h3>
+                <h3>{props.tituloP}</h3>
                 <line />
-                <h4>500 Pollens</h4>
+                <h4>{props.pollenV}</h4>
 
                 <br />
-                <h3>Tamanhos:</h3>
+                <h3>{props.tamanho}</h3>
 
                 <div id="seletor">
                     <ul>
-                        <li><button>S</button></li>
-                        <li><button>M</button></li>
-                        <li><button>L</button></li>
-                        <li><button>XL</button></li>
+                        <li><button>{props.tamanho1}</button></li>
+                        <li><button>{props.tamanho2}</button></li>
+                        <li><button>{props.tamanho3}</button></li>
+                        <li><button>{props.tamanho4}</button></li>
+                        <li><button>{props.tamanho5}</button></li>
+
                     </ul>
 
                     <label htmlFor="quantidade">Quantidade:</label>
                     <select id="quantidade">
                         <option value="">Selecione</option>
-                        <option value="1">1</option>
-                        <option value="2">2</option>
-                        <option value="3">3</option>
-                        <option value="4">4</option>
-                        <option value="5">5</option>
+                        <option value="1">{props.value1}</option>
+                        <option value="2">{props.value2}</option>
+                        <option value="3">{props.value3}</option>
+                        <option value="4">{props.value4}</option>
+                        <option value="5">{props.value5}</option>
 
                     </select>
 
@@ -44,7 +46,7 @@ function CardDescriptionProduct() {
                         <input type="checkbox" />
                         Desejo Receber em Casa
                     </label>
-                    
+
 
                     <button>Confirmar</button>
 
