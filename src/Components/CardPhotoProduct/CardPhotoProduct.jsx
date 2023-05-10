@@ -9,9 +9,7 @@ function CardPhotoProduct({ id, name, src, pollen }) {
     const { newItem } = useContext(storage);
     const [favorite, setFavorite] = useState(false);
     const [item, setItem] = useState({});
-    const [unity, setUnity] = useState(0);
-
-
+    const [unity, setUnity] = useState(1);
 
     const favoriteProduct = () => {
         if (!favorite) {
@@ -22,36 +20,35 @@ function CardPhotoProduct({ id, name, src, pollen }) {
     };
 
     useEffect(() => {
-        if (item.productId) {
+        if (item.id) {
             newItem(item);
         }
     }, [item]);
 
-    // const addInCart = () => {
-    //     setUnity(unity + 1);
-    //     setProduct({
-    //         name,
-    //         productId: id,
-    //         quantity: unity + 1,
-    //         unitPrice: price.replace(/\./, ','),
-    //         subTotal: parseFloat(price * (unity + 1))
-    //             .toFixed(2)
-    //             .replace(/\./, ','),
-    //     });
-    // };
+    const addInCart = () => {
+        setUnity(unity + 1);
+        console.log(unity);
+        setItem({
+            id: id,
+            name: name,
+            src: src,
+            pollen: pollen,
+            quantity: unity,
+        });
+    };
 
     return (
         <div className="CardPhotoProduct">
             <div id="CardPhoto">
                 {favorite ?
                     <i
-                        className={favorite}
+                        className={favorite && "FillHeart"}
                         onClick={() => favoriteProduct()}>
                         {< AiFillHeart />}
                     </i>
                     :
                     <i
-                        className={favorite}
+                        className={"OutlineHeart"}
                         onClick={() => favoriteProduct()}>
                         {<AiOutlineHeart />}
                     </i>}
@@ -60,11 +57,9 @@ function CardPhotoProduct({ id, name, src, pollen }) {
                 <div>
                     <i>{HiCurrencyDollar}</i>
                     <h5>{pollen}</h5>
-                    <i>{< BsFillCartPlusFill />}</i>
+                    <button onClick={addInCart}>{< BsFillCartPlusFill />}</button>
                 </div>
             </div>
-            )
-            })}
         </div>
     );
 }
