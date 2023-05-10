@@ -14,7 +14,7 @@ const productsInfo = [
   {
     id: 3,
     name: "Copo térmico de inox 500ml",
-    src: "/Produtos/Copo_termico_inox.png",
+    src: "/Produtos/Copo_Termico_Inox.png",
     pollen: 70,
   },
   {
