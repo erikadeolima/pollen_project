@@ -4,6 +4,7 @@ import Banner from '../../Components/Banner/Banner';
 import CardPhotoProduct from '../../Components/CardPhotoProduct/CardPhotoProduct';
 import storage from '../../Context/Context';
 
+
 function Homepage() {
     const { getProducts, products } = useContext(storage);
     useEffect(() => {
@@ -22,6 +23,10 @@ function Homepage() {
                     pollen={product.pollen}
                 />))
             }
+            
+
+
+            
         </div>
     )
 };

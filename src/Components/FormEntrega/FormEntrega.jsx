@@ -1,26 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
-
+import axios from 'axios';
 
 function FormEntrega() {
+    const { register, handleSubmit, setValue, setFocus } = useForm();
+    const [loading, setLoading] = useState(false);
 
-    const { register, handleSubmit, setValue } = useForm();    
-
-    const onSubmit = (e) => {
-        console.log(e);
+    const onSubmit = (event) => {
+        console.log(event);
     }
 
-    const checkCEP = (e) => {
-        const cep = e.target.value.replace(/\D/g, '');
+    const checkCEP = (event) => {
+        const cep = event.target.value.replace(/\D/g, '');
         console.log(cep);
+        setLoading(true);
 
-        fetch(`https://viacep.com.br/ws/${cep}/json/`).then(data => {
+        axios.get(`https://viacep.com.br/ws/${cep}/json/`).then(({ data }) => {
             console.log(data);
             setValue('endereco', data.logradouro);
             setValue('bairro', data.bairro)
             setValue('cidade', data.localidade);
             setValue('estado', data.uf);
-        });
+            setLoading(false);
+        }).catch(() => setLoading(false));
+        setFocus('numero');
+
     }
 
     return (
@@ -43,7 +47,7 @@ function FormEntrega() {
                 <input type="number" placeholder='Numero'
                     {...register("numero")} />
             </label>
-            
+
             <label>
                 <input type="text" placeholder='Complemento'
                     {...register("complemento")} />
@@ -53,14 +57,13 @@ function FormEntrega() {
                 <input type="text" placeholder='Cidade'
                     {...register("cidade")} />
             </label>
-            
+
             <label>
                 <input type="text" placeholder='Estado'
                     {...register("estado")} />
             </label>
-            <button type="submit">Enviar</button>
+            <button type="submit" disabled={loading}>Enviar</button>
         </form>
     );
-
 }
 export default FormEntrega;
