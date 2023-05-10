@@ -1,12 +1,14 @@
 import React, { useState } from 'react';
 import storage from './Context';
 import userInfo from '../untils/userInfo';
+import productsInfo from '../untils/productsInfo';
 
 function Provider({ children }) {
 
   const [userName, setUserName] = useState("");
   const [pollenBalance, setPollenBalance] = useState(0);
   const [orderHistory, setOrderHistory] = useState([]);
+  const [products, setProducts] = useState([]);
 
   const getUserName = () => {
     const user = userInfo.userName;
@@ -23,6 +25,11 @@ function Provider({ children }) {
     setOrderHistory(orderHistory);
   };
 
+  const getProducts = () => {
+    const products = productsInfo;
+    setProducts(products);
+  }
+
   const updatePollenBalance = (pollens) => {
     setPollenBalance(pollens);
   };
@@ -37,7 +44,6 @@ function Provider({ children }) {
     }); */
   };
 
-
   const context = {
     userName,
     pollenBalance,
@@ -46,7 +52,9 @@ function Provider({ children }) {
     getPollenBalance,
     getOrderHistory,
     updateOrderHistory,
-    updatePollenBalance
+    updatePollenBalance,
+    getProducts,
+    products,
   };
 
   return (

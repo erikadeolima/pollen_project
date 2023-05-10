@@ -1,7 +1,7 @@
 import React from "react";
 import './CardDescriptionProduct.css';
 
-function CardDescriptionProduct() {
+function CardDescriptionProduct(props) {
     return (
         <div className="descriptionP">
             <div id="photoP">
@@ -46,7 +46,7 @@ function CardDescriptionProduct() {
                         <input type="checkbox" />
                         Desejo Receber em Casa
                     </label>
-                    
+
 
                     <button>Confirmar</button>
 
