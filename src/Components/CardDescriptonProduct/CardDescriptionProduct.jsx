@@ -5,7 +5,7 @@ function CardDescriptionProduct() {
     return (
         <div className="descriptionP">
             <div id="photoP">
-                <img src="#" alt="Foto do Produto" />
+                <img src={props.scr} alt="Foto do Produto" />
             </div>
             <div id="descricao">
                 <h3>{props.tituloP}</h3>
