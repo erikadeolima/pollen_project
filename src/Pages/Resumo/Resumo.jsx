@@ -1,6 +1,6 @@
 import React from 'react';
 import './Resumo.css';
-import FormEntrega from '../../Components/FormEntrega/FormEntrega';
+
 
 
 function Resumo() {
@@ -19,7 +19,7 @@ function Resumo() {
             
             <div>
                 <h3>Endereço para Entrega</h3>
-                <FormEntrega/>
+                
 
             </div>
 

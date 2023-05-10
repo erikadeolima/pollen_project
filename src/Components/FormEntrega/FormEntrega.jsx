@@ -62,7 +62,7 @@ function FormEntrega() {
                 <input type="text" placeholder='Estado'
                     {...register("estado")} />
             </label>
-            <button type="submit" disabled={loading}>Enviar</button>
+            
         </form>
     );
 }

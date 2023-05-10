@@ -37,18 +37,7 @@ function CardDescriptionProduct(props) {
                     </select>
 
                     <br />
-                    <h3>Envio</h3>
-                    <label>
-                        <input type="checkbox" />
-                        Desejo Retirar no escritório do Bees
-                    </label>
-                    <label>
-                        <input type="checkbox" />
-                        Desejo Receber em Casa
-                    </label>
-
-
-                    <button>Confirmar</button>
+                    
 
                 </div>
 
