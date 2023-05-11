@@ -11,7 +11,7 @@ function Homepage() {
     }, [products]);
 
     return (
-        <div>
+        <div className='mainContainer'>
             <Banner />
             {products.map((product) => (
                 <CardPhotoProduct
