@@ -1,4 +1,8 @@
-.canecaItem{
+.photoResumo {
+    width: fit-content;
+    height: auto;
     display: flex;
+    flex-direction: row;
     align-items: center;
+    margin: 2em 0;
 }
