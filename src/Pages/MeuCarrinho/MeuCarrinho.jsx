@@ -12,7 +12,7 @@ function MeuCarrinho() {
     };
 
     return (
-        <div className='MeuCarrinho'>
+        <div className=' mainContainer MeuCarrinho'>
             <CardDescriptionProduct
             />
             {/* props */}

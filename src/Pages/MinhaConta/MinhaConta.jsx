@@ -12,7 +12,7 @@ function MinhaConta() {
     }, []);
 
     return (
-        <div className='minha_conta'>
+        <div className=' mainContainer minha_conta'>
             <h3 className='tituloPolens'>
                 {`Você tem ${pollenBalance} pólens acumulados.`}
             </h3>

@@ -5,7 +5,7 @@ import './Resumo.css';
 
 function Resumo() {
     return (
-        <div id='Resumo'>
+        <div id='Resumo' className='mainContainer'>
             <h3 className='resumoPedido'>Resumo do Pedido</h3>
             <div className='canecaItem'>
                 
