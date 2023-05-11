@@ -1,9 +1,11 @@
 import React from "react";
 import './PrimaryButton.css';
 
-function PrimaryButton() {
+function PrimaryButton(props) {
     return(
-        <div></div>
+        <div className="primaryButton">
+            <button>{props.btn}</button>
+        </div>
     );
 }
 
