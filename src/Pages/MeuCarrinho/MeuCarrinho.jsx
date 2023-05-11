@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import './MeuCarrinho.css';
-import CardDescriptionProduct from '../../Components/CardDescriptonProduct/CardDescriptionProduct';
+import CardProductPhoto from '../../Components/CardProductPhoto/CardProductPhoto';
 import FormEntrega from '../../Components/FormEntrega/FormEntrega';
 
 
@@ -13,7 +13,7 @@ function MeuCarrinho() {
 
     return (
         <div className=' mainContainer MeuCarrinho'>
-            <CardDescriptionProduct
+            <CardProductPhoto
             />
             {/* props */}
             <div>

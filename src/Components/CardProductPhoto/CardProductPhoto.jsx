@@ -1,9 +1,9 @@
 import React from "react";
-import './CardDescriptionProduct.css';
+import './CardProductPhoto.css';
 
 function CardDescriptionProduct(props) {
     return (
-        <div className="descriptionP">
+        <div>
             <div id="photoP">
                 <img src={props.scr} alt="Foto do Produto" />
             </div>
