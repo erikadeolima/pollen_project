@@ -70,7 +70,7 @@ function CardPhotoProduct({ id, name, src, pollen }) {
                 <p>{name}</p>
                 <div className='productShop'>
                     <HiCurrencyDollar className='cardIcon' />
-                    <p>pólens</p>
+                    <p>{pollen} pólens</p>
                     < BsFillCartPlusFill className='cardIcon addProduct' onClick={addInCart} />
                 </div>
             </div>
