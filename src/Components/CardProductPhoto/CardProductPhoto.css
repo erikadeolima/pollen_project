@@ -1,5 +1,8 @@
-.CardDescriptionProductContainer {
+.productPhoto {
     width: 200px;
-    height: 500px;
-    background-color: #ffff00;
+    height: 200px;
+    box-shadow: 6px 6px 12px #bebebe,
+    -6px -6px 12px #ffffff;
+    border-radius: 24px;
+    margin-right: 3em;
 }
