@@ -3,6 +3,12 @@ import './MinhaConta.css';
 import Line from '../../Components/Line/Line';
 import storage from '../../Context/Context';
 import PrimaryButton from '../../Components/PrimaryButton/PrimaryButton';
+import Input from '../../Components/Input/Input';
+
+
+
+
+
 
 
 
@@ -19,10 +25,12 @@ function MinhaConta() {
     }, []);
     
     return (
-        <div className=' mainContainer minha_conta'>
+        <div className='mainContainer minha_conta'>
+            <div className='titulo'>
             <h3 className='tituloPolens'>
-                {`Você tem ${pollenBalance} pólens acumulados.`}
+                {`Você tem ${pollenBalance} pollens acumulados.`}
             </h3>
+            </div>
             <Line />
             <br />
             <p className='tituloPedidos'>
@@ -31,52 +39,61 @@ function MinhaConta() {
             <br />
             <div className='table'>
             <thead>
-                        <tr>
-                            <td>Data do Pedido</td>
-                            <td>Status do Pedido</td>
-                            <td>Total do Pedido</td>
-                            <td>Produtos</td>
-                        </tr>
+                    <tr>
+                        <td><strong>Data do Pedido</strong></td>
+                        <td><strong>Produtos</strong></td>
+                        <td><strong>Total do Pedido</strong></td>
+                        <td><strong>Status do Pedido</strong></td>
+                                               
+                    </tr>
                         <tr>
                             <td>09/05/2023</td>
-                            <td>Entregue - Retirada no Bees</td>
-                            <td>100 Pólens</td>
                             <td>Camisa Tamanho P</td>
+                            <td>100 Pollens</td>
+                            <td>Entregue - Retirada no Bees</td>
+                                                  
                         </tr>
                         <tr>
                             <td>20/01/2023</td>
-                            <td>Entregue - Retirada no Bees</td>
-                            <td>50 Pólens</td>
                             <td>Caneca 400ml </td>
+                            <td>50 Pollens</td>
+                            <td>Entregue - Retirada no Bees</td>
+                           
                         </tr>
                         <tr>
                             <td>09/05/2023</td>
-                            <td>Entregue - Retirada no Bees</td>
-                            <td>50 Pólens</td>
                             <td>Garrafa de Inox</td>
+                            <td>50 Pollens</td>
+                            <td>Entregue - Retirada no Bees</td>
+                           
+                            
                         </tr>
                     </thead>
                     </div>
-
-            
-
+        <div></div>
+            <div className='transfira'>
             <p className='tituloTransfira'>
-                Não vai usar seus pólens? Transfira para outra pessoa! </p>
+                Não vai usar seus pollens? Transfira para outra pessoa! </p>
             <br />
-            <div className='presente'>
-                <label htmlFor="emailPresente">Digite o e-mail da pessoa que vai receber os pólens:</label>
-                <input type="e-mail" name="" id="emailPresente" className='input' />
-                <label htmlFor="quantidadePólens">Quantos pólens deseja enviar?</label>
-                <input type="number" name="" id="quantidadePólens" className='input' />
-                
-               
             </div>
-            
-            <div>
+            <div className='meuinput'>
+            <div className='presente'>
+                <label htmlFor="emailPresente">Digite o e-mail da pessoa que vai receber os pollens:</label>
+                <Input/>
+            </div>
+                {/* <input type="e-mail" name="" id="emailPresente" className='input' /> */}
+            <div className='polensEnviar'>
+                <label htmlFor="quantidadePólens">Quantos pollens deseja enviar?</label>
+                <Input/>
+                {/* <input type="number" name="" id="quantidadePólens" className='input' /> */}
+            </div>
+            </div>
+                
             <label htmlFor="mensagem">Deixe uma mensagem de carinho!</label>
-            <textarea name="mensagem" id="" cols="30" rows="5"></textarea>
-            
-                <PrimaryButton   btn="Enviar" />
+            <Input/>
+            {/* <textarea name="mensagem" id="" cols="30" rows="5"></textarea> */}
+            <div className='btn-enviar'>
+            <PrimaryButton btn="Enviar"/>
             </div>
         </div>
     )

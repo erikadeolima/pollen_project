@@ -17,12 +17,14 @@ function Header() {
                 </Link>
             </div>
             <div className='menu-itens'>
+                <Link to="/Sobre" className='removeStyle'>
+                    <p>sobre nós</p>
+                </Link>
                 <Link to="/MinhaConta" className='removeStyle'>
-                    <p className='font-md'>minha conta</p>
+                    <p>minha conta</p>
                 </Link>
                 <Link to="/MeuCarrinho" className='removeStyle'>
-                    {/* <AiOutlineShoppingCart /> */}
-                    <p className='font-md'>meu carrinho</p>
+                    <p>meu carrinho</p>
                 </Link>
             </div>        
         </header>

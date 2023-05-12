@@ -16,9 +16,9 @@ function Table(props) {
                     <thead>
                         <tr>
                             <td>Data do Pedido</td>
-                            <td>Produtos</td>
-                            <td>Total do Pedido</td>
                             <td>Status do Pedido</td>
+                            <td>Total do Pedido</td>
+                            <td>Produtos</td>
                         </tr>
                     </thead>
                     <tbody>
@@ -26,14 +26,14 @@ function Table(props) {
                             return (
                                 <tr key={order.id}>
                                     <td>{order.dateOrder}</td>
+                                    <td>{order.status}</td>
+                                    <td>{order.total}</td>
                                     {order.products
                                         .map((product) => {
                                             return (<tr key={product.id}>
-                                                <td>{`${product.name}`}</td> 
+                                                <td>{`${product.name}, tamanho ${product.size}`}</td>
                                             </tr>);
                                         })}
-                                    <td>{order.total}</td>
-                                    <td>{order.status}</td>
                                 </tr>
                             )
                         })}
