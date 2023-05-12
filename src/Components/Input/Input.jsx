@@ -3,7 +3,7 @@ import './Input.css';
 
 function Input(quantity) {
     return (
-        <input className="inputForms" type="text" disabled={true} value={quantity.quantity}></input>
+        <input className="inputFormsSm" type="text" disabled={true} value={quantity.quantity}></input>
     );
 }
 
