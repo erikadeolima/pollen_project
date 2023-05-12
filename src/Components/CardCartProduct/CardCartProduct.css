@@ -1,0 +1,29 @@
+.cart-product-container{
+  display: flex;
+    flex-direction: row;
+    margin-bottom: 2em;
+}
+
+.ProductName {
+  font-size: 2em;
+}
+
+.productPhoto {
+  width: 400px;
+  height: 400px;
+  box-shadow: 6px 6px 12px #bebebe,
+  -6px -6px 12px #ffffff;
+  border-radius: 24px;
+  margin-right: 3em;
+  float: left;
+}
+
+.productPhoto img {
+  width: 80%;
+  height: 80%;
+}
+
+.cart-product-info{
+  height: 400px;
+  float: left;
+}
