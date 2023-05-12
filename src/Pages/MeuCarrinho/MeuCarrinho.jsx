@@ -1,7 +1,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import './MeuCarrinho.css';
 
-import CardProductPhoto from '../../Components/CardProductPhoto/CardProductPhoto';
+import CardCartProduct from '../../Components/CardCartProduct/CardCartProduct';
 import FormEntrega from '../../Components/FormEntrega/FormEntrega';
 import Line from '../../Components/Line/Line';
 import Input from '../../Components/Input/Input';
@@ -40,26 +40,17 @@ function MeuCarrinho() {
                 <div>
                     <div className='photoAndTxtContainer'>
                         {cartItens.map((item) => (
-                            < CardProductPhoto
+                            < CardCartProduct
                                 key={item.id}
                                 src={item.src}
+                                name={item.name}
+                                pollens={item.pollens}
+                                quantity={item.quantity}
+                                subTotal={item.subTotal}
                             />
                         ))}
                     </div>
-                    <div>
-                        {cartItens.map((item) => (
-                            <div key={item.id}>
-                                <h3 className='ProductName'>{item.name}</h3>
-                                <Line />
-                                <p>Preço Unitário: {item.pollens} pollens</p>
-                                <label>Quantidade:</label>
-                                <br />
-                                <Input quantity={item.quantity} />
-                                <p>Subtotal: {item.subTotal} pollens</p>
-                            </div>
-                        ))
-                        }
-                    </div>
+                    <Line />
                     <div className='caixa-selecao'>
                         <h2>Envio</h2>
                         <input type="radio" name="envio" value="retirada" />

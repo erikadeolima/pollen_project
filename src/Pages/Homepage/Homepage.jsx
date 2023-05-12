@@ -21,7 +21,7 @@ function Homepage() {
                         id={product.id} na
                         name={product.name}
                         src={product.src}
-                        pollen={product.pollen}
+                        pollens={product.pollens}
                     />))
                 }
             </section>
