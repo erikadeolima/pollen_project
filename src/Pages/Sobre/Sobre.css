@@ -1,0 +1,12 @@
+.mainContainer {
+    height: 95%;
+    width: 95%;
+  }
+
+  .tituloSobre {
+    font-size: 34px;
+  }
+
+  .resposta{
+    font-size: 26px;
+  }
