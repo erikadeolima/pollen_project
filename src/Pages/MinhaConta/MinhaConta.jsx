@@ -62,6 +62,12 @@ function MinhaConta() {
                 <input type="e-mail" name="" id="emailPresente" className='input' />
                 <label htmlFor="quantidadePólens">Quantos pólens deseja enviar?</label>
                 <input type="number" name="" id="quantidadePólens" className='input' />
+                
+               
+            </div>
+            <div>
+            <label htmlFor="mensagem">Deixe uma mensagem de carinho!</label>
+            <textarea name="mensagem" id="" cols="30" rows="5"></textarea>
                 <PrimaryButton btn="Enviar"/>
             </div>
         </div>
