@@ -8,20 +8,20 @@ function Sobre() {
                 O que é o Pollen Points?
             </h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in ante nec odio rutrum cursus. Fusce pharetra a massa sit amet tempor. Donec quis placerat dui, et venenatis libero. Etiam semper felis eget tincidunt suscipit. Integer efficitur quam a nisi mattis vulputate. Nullam et ultrices ex.  
+                O Póllen Points é uma forma de demonstrarmos que valorizamos o empenho e a entrega de cada colaborador. Com ele você pode escolher o prêmio que quiser sem sair de casa.
             </p>
             <br />
             <h2 className='tituloSobre'>
                 Como acumular pólens? 
             </h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in ante nec odio rutrum cursus. Fusce pharetra a massa sit amet tempor. Donec quis placerat dui, et venenatis libero. Etiam semper felis eget tincidunt suscipit. Integer efficitur quam a nisi mattis vulputate. Nullam et ultrices ex. 
+                Você ganhará pontos semanais no valor de 100 points onde poderá acumular e trocar por prêmios no nosso site, através de premiações em treinamentos e atividades. 
             </p>
             <h2 className='tituloSobre'>
                 Você pode ainda espelhar seus pólens por aí!
             </h2>
             <p>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer in ante nec odio rutrum cursus. Fusce pharetra a massa sit amet tempor. Donec quis placerat dui, et venenatis libero. Etiam semper felis eget tincidunt suscipit. Integer efficitur quam a nisi mattis vulputate. Nullam et ultrices ex. 
+                Com os seus pólens você poderá encaminhar mensagens para os seus colegas de trabalho e distribuir quantos pólens você quiser, isto lhe dará um retorno de 50 pólens, este é o momento de retribuir a ajuda que recebeu durante a semana!  
             </p>
         </div>
     )

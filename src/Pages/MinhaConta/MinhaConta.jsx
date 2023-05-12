@@ -22,8 +22,36 @@ function MinhaConta() {
                 Veja aqui o seu histórico de pedidos
             </p>
             <br />
+            <div className='table'>
+            <thead>
+                        <tr>
+                            <td>Data do Pedido</td>
+                            <td>Status do Pedido</td>
+                            <td>Total do Pedido</td>
+                            <td>Produtos</td>
+                        </tr>
+                        <tr>
+                            <td>09/05/2023</td>
+                            <td>Entregue - Retirada no Bees</td>
+                            <td>100 Pólens</td>
+                            <td>Camisa Tamanho P</td>
+                        </tr>
+                        <tr>
+                            <td>20/01/2023</td>
+                            <td>Entregue - Retirada no Bees</td>
+                            <td>50 Pólens</td>
+                            <td>Caneca 400ml </td>
+                        </tr>
+                        <tr>
+                            <td>09/05/2023</td>
+                            <td>Entregue - Retirada no Bees</td>
+                            <td>50 Pólens</td>
+                            <td>Garrafa de Inox</td>
+                        </tr>
+                    </thead>
+                    </div>
 
-            <Table page="minha_conta" />
+            
 
             <p className='tituloTransfira'>
                 Não vai usar seus pólens? Transfira para outra pessoa! </p>
