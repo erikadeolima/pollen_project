@@ -15,26 +15,26 @@ function MeuCarrinho() {
         <div className='MeuCarrinho'>
             <CardDescriptionProduct
             />
-            {/* props */}
-            <div>
-
-
+            <div className='caixa-selecao'>
                 <h3>Envio</h3>
                 <label>
-                    <input type="checkbox" />
+                    <input type="radio" name="envio" value="retirada" />
                     Desejo Retirar no escritório do Bees
                 </label>
                 <label>
                     <input
-                        type="checkbox"
+                        type="radio"
+                        name="envio"
+                        value="receber_em_casa"
                         checked={desejaReceberEmCasa}
                         onChange={handleDesejaReceberEmCasaChange}
                     />
                     Desejo Receber em Casa
                 </label>
+
+                {desejaReceberEmCasa && <FormEntrega />}
             </div>
-            {desejaReceberEmCasa && <FormEntrega />}
-            <button>Confirmar</button>
+            <button className="botao-finalizar">Confirmar</button>
         </div>
     )
 };
