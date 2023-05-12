@@ -1,4 +1,5 @@
 .cart-product-container{
+  max-width: 100%;
   display: flex;
     flex-direction: row;
     margin-bottom: 2em;
