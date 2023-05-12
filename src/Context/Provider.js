@@ -18,8 +18,8 @@ function Provider({ children }) {
   };
 
   const getPollenBalance = () => {
-    const pollen = userInfo.pollenBalance;
-    setPollenBalance(pollen);
+    const pollens = userInfo.pollenBalance;
+    setPollenBalance(pollens);
   };
 
   const getOrderHistory = () => {
