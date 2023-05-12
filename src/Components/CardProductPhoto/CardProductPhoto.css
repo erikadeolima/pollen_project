@@ -5,4 +5,13 @@
     -6px -6px 12px #ffffff;
     border-radius: 24px;
     margin-right: 3em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.productPhoto img {
+    background-color: aqua;
+    width: 300px;
+    height: 300px;
 }
