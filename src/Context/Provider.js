@@ -30,20 +30,6 @@ function Provider({ children }) {
   const getProducts = () => {
     const products = productsInfo;
     setProducts(products);
-  }
-
-  const updatePollenBalance = (pollens) => {
-    setPollenBalance(pollens);
-  };
-
-  const updateOrderHistory = (order) => {
-    setOrderHistory(order);
-    /* setOrderHistory((prevState) => {
-      return {
-        ...prevState,
-        order
-      };
-    }); */
   };
   const getCartItem = () => {
     const cartItens = JSON.parse(localStorage.getItem('cart'));
@@ -87,15 +73,14 @@ function Provider({ children }) {
     getUserName,
     getPollenBalance,
     getOrderHistory,
-    updateOrderHistory,
-    updatePollenBalance,
     getProducts,
     products,
     total,
     setTotal,
     cart,
     setCart,
-    newItem
+    newItem,
+    getCartItem
   };
 
   return (
