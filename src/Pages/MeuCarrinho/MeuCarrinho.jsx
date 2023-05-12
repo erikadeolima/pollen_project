@@ -62,21 +62,24 @@ function MeuCarrinho() {
                     </div>
                     <div className='caixa-selecao'>
                         <h2>Envio</h2>
-                        <input type="checkbox" />
+                        <input type="radio" name="envio" value="retirada" />
                         Desejo Retirar no escritório do Bees
                         <br />
                         <input
-                            type="checkbox"
+                            type="radio"
+                            name="envio"
+                            value="receber_em_casa"
                             checked={desejaReceberEmCasa}
                             onChange={handleDesejaReceberEmCasaChange}
                         />
                         Desejo Receber em Casa
                     </div>
                     {desejaReceberEmCasa && <FormEntrega />}
-                </div >
+                </div>
             }
-        </div>
+        </div >
     )
+
 };
 
 export default MeuCarrinho;
