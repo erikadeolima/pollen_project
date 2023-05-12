@@ -93,7 +93,9 @@ function MinhaConta() {
             <Input/>
             {/* <textarea name="mensagem" id="" cols="30" rows="5"></textarea> */}
             <div className='btn-enviar'>
-            <PrimaryButton btn="Enviar"/>
+            <PrimaryButton 
+            title="minha_conta"
+            btn="Enviar"/>
             </div>
         </div>
     )

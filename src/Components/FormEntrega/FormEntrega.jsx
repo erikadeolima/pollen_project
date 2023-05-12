@@ -55,7 +55,8 @@ function FormEntrega() {
                 {...register("estado")}
             />
             <PrimaryButton
-                btn="Finalizar"
+                btn="Finalizar" 
+                title="meu_carrinho"
             />
         </form>
     );
