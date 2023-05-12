@@ -1,17 +1,23 @@
 import React, { useContext, useEffect } from 'react';
 import './MinhaConta.css';
 import Line from '../../Components/Line/Line';
-import Table from '../../Components/Table/Table';
 import storage from '../../Context/Context';
 import PrimaryButton from '../../Components/PrimaryButton/PrimaryButton';
 
+
+
+
+
 function MinhaConta() {
+    
+    
     const { pollenBalance, getPollenBalance } = useContext(storage);
+
 
     useEffect(() => {
         getPollenBalance();
     }, []);
-
+    
     return (
         <div className=' mainContainer minha_conta'>
             <h3 className='tituloPolens'>
@@ -65,13 +71,16 @@ function MinhaConta() {
                 
                
             </div>
+            
             <div>
             <label htmlFor="mensagem">Deixe uma mensagem de carinho!</label>
             <textarea name="mensagem" id="" cols="30" rows="5"></textarea>
-                <PrimaryButton btn="Enviar"/>
+            
+                <PrimaryButton   btn="Enviar" />
             </div>
         </div>
     )
 };
 
-export default MinhaConta
+
+export default MinhaConta;
