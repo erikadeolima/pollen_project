@@ -15,33 +15,36 @@ function MeuCarrinho() {
     };
 
     return (
-        <div className='MeuCarrinho'>
-            <CardDescriptionProduct
-            />
-            <div className='caixa-selecao'>
-                <h3>Envio</h3>
-                <label>
-                    <input 
-                    type="radio" 
-                    name="envio" 
-                    value="retirada" />
-                    Desejo Retirar no escritório do Bees
-                    <br/>
-                    <input
-                        type="radio"
-                        name="envio"
-                        value="receber_em_casa"
-                        checked={desejaReceberEmCasa}
-                        onChange={handleDesejaReceberEmCasaChange}
-                    />
-                    Desejo Receber em Casa
+        <div className=' mainContainer'>
+            <div className='photoAndTxtContainer'>
+                <CardProductPhoto />
+                <div>
+                    <h3 className='ProductName'>Nome do Produto</h3>
+                    <Line />
+                    <p>Preço</p>
+                    <label>Quantidade:</label>
+                    <br />
+                    <Input />
+                    <div className='caixa-selecao'>
+                        <h2>Envio</h2>
+                        <input type="radio" name="envio" value="retirada" />
+                        Desejo Retirar no escritório do Bees
+                        <br />
+                        <input
+                            type="radio"
+                            name="envio"
+                            value="receber_em_casa"
+                            checked={desejaReceberEmCasa}
+                            onChange={handleDesejaReceberEmCasaChange}
+                        />
+                        Desejo Receber em Casa
+                    </div>
                 </div>
-
                 {desejaReceberEmCasa && <FormEntrega />}
             </div>
-            <button className="botao-finalizar">Confirmar</button>
         </div>
-    );
+    )
+
 };
 
 export default MeuCarrinho
