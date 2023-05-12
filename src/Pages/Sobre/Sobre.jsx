@@ -21,7 +21,7 @@ function Sobre() {
                 Você pode ainda espelhar seus pollens por aí!
             </h2>
             <p>
-                Com os seus pollens você poderá encaminhar mensagens para os seus colegas de trabalho e distribuir quantos pollens você quiser, isto lhe dará um retorno de 50 pólens, este é o momento de retribuir a ajuda que recebeu durante a semana!  
+                Com os seus pólens você poderá encaminhar mensagens para os seus colegas de trabalho e distribuir quantos pólens você quiser, isto lhe dará um retorno de 50 pólens, este é o momento de retribuir a ajuda que recebeu durante a semana!  
             </p>
         </div>
     )

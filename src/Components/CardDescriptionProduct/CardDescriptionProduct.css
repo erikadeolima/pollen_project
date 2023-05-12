@@ -11,10 +11,11 @@
 }
 
 .heartIcon {
-    background-color: #FFF;
+    background-color: transparent;
     position: absolute;
-    padding: 2em 1em;
+    padding: 1em 0 0 1em;
     cursor: pointer;
+    font-size: 1.5em;
 }
 
 .descriptionImg {
