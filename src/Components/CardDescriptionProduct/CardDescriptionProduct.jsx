@@ -71,7 +71,8 @@ function CardPhotoProduct({ id, name, src, pollens }) {
                 <div className='productShop'>
                     <HiCurrencyDollar className='cardIcon' />
                     <p>{pollens} pollens</p>
-                    < BsFillCartPlusFill className='cardIcon addProduct' onClick={addInCart} />
+                    < BsFillCartPlusFill className='cardIcon addProduct' onClick= {() => alert("Produto enviado para o carrinho!") } />
+                    
                 </div>
             </div>
         </div>
