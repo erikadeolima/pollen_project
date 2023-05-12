@@ -4,6 +4,8 @@ import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
 
+import PrimaryButton from '../PrimaryButton/PrimaryButton';
+
 function FormEntrega() {
     const { register, handleSubmit, setValue, setFocus } = useForm();
     const [loading, setLoading] = useState(false);
@@ -52,7 +54,9 @@ function FormEntrega() {
             <input className='inputForms' type="text" placeholder='Estado'
                 {...register("estado")}
             />
-            <button>Confirmar</button>
+            <PrimaryButton
+                btn="Finalizar"
+            />
         </form>
     );
 }
