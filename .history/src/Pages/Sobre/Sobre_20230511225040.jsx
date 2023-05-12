@@ -12,16 +12,16 @@ function Sobre() {
             </p>
             <br />
             <h2 className='tituloSobre'>
-                Como acumular pollens? 
+                Como acumular pólens? 
             </h2>
             <p>
-                Você ganhará pontos semanais no valor de 100 pollens onde poderá acumular e trocar por prêmios no nosso site, através de premiações em treinamentos e atividades. 
+                Você ganhará pontos semanais no valor de 100 points onde poderá acumular e trocar por prêmios no nosso site, através de premiações em treinamentos e atividades. 
             </p>
             <h2 className='tituloSobre'>
-                Você pode ainda espelhar seus pollens por aí!
+                Você pode ainda espelhar seus pólens por aí!
             </h2>
             <p>
-                Com os seus pólens você poderá encaminhar mensagens para os seus colegas de trabalho e distribuir quantos pólens você quiser, isto lhe dará um retorno de 50 pollens, este é o momento de retribuir a ajuda que recebeu durante a semana!  
+                Com os seus pólens você poderá encaminhar mensagens para os seus colegas de trabalho e distribuir quantos pólens você quiser, isto lhe dará um retorno de 50 pólens, este é o momento de retribuir a ajuda que recebeu durante a semana!  
             </p>
         </div>
     )
