@@ -13,7 +13,7 @@ function Header() {
                     <img className="logo" src={logo} alt="Logo do site. Uma moeda amarela com a letra P e algumas abelhas" />
                 </Link>
                 <Link to="/" className='removeStyle'>
-                    <h1 className='nameSiteHeader'>Pólens</h1>
+                    <h1 className='nameSiteHeader'>PollenPoints</h1>
                 </Link>
             </div>
             <div className='menu-itens'>

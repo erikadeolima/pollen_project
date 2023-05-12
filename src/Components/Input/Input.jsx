@@ -1,9 +1,9 @@
 import React from "react";
 import './Input.css';
 
-function Input() {
+function Input(placeholder) {
     return(
-        <div></div>
+        <input className="inputForms" type="text" placeholder={placeholder.txt}></input>
     );
 }
 

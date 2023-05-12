@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import './MeuCarrinho.css';
-import CardDescriptionProduct from '../../Components/CardDescriptonProduct/CardDescriptionProduct';
+
+import CardProductPhoto from '../../Components/CardProductPhoto/CardProductPhoto';
 import FormEntrega from '../../Components/FormEntrega/FormEntrega';
+import Line from '../../Components/Line/Line';
+import Input from '../../Components/Input/Input';
 
 
 function MeuCarrinho() {
@@ -18,10 +21,12 @@ function MeuCarrinho() {
             <div className='caixa-selecao'>
                 <h3>Envio</h3>
                 <label>
-                    <input type="radio" name="envio" value="retirada" />
+                    <input 
+                    type="radio" 
+                    name="envio" 
+                    value="retirada" />
                     Desejo Retirar no escritório do Bees
-                </label>
-                <label>
+                    <br/>
                     <input
                         type="radio"
                         name="envio"
@@ -30,13 +35,13 @@ function MeuCarrinho() {
                         onChange={handleDesejaReceberEmCasaChange}
                     />
                     Desejo Receber em Casa
-                </label>
+                </div>
 
                 {desejaReceberEmCasa && <FormEntrega />}
             </div>
             <button className="botao-finalizar">Confirmar</button>
         </div>
-    )
+    );
 };
 
 export default MeuCarrinho

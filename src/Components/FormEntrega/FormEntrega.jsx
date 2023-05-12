@@ -1,3 +1,5 @@
+import './FormEntrega.css';
+
 import React, { useState } from 'react';
 import { useForm } from 'react-hook-form';
 import axios from 'axios';
@@ -29,40 +31,28 @@ function FormEntrega() {
 
     return (
         <form className='formulario-entrega' onSubmit={handleSubmit(onSubmit)}>
-            <label>
-                <input type="text" placeholder='CEP'
-                    {...register("cep")} onBlur={checkCEP} />
-            </label>
-
-            <label>
-                <input type="text" placeholder='Endereco'
-                    {...register("endereco")} />
-            </label>
-            <label>
-                <input type="text" placeholder='Bairro'
-                    {...register("bairro")} />
-            </label>
-
-            <label>
-                <input type="number" placeholder='Numero'
-                    {...register("numero")} />
-            </label>
-
-            <label>
-                <input type="text" placeholder='Complemento'
-                    {...register("complemento")} />
-            </label>
-
-            <label>
-                <input type="text" placeholder='Cidade'
-                    {...register("cidade")} />
-            </label>
-
-            <label>
-                <input type="text" placeholder='Estado'
-                    {...register("estado")} />
-            </label>
-            
+            <input className='inputForms' type="text" placeholder='CEP'
+                {...register("cep")} onBlur={checkCEP}
+            />
+            <input className='inputForms' type="text" placeholder='Rua'
+                {...register("endereco")}
+            />
+            <input className='inputForms' type="text" placeholder='Bairro'
+                {...register("bairro")}
+            />
+            <input className='inputForms' type="text" placeholder='Número'
+                {...register("numero")}
+            />
+            <input className='inputForms' type="text" placeholder='Complemento'
+                {...register("complemento")}
+            />
+            <input className='inputForms' type="text" placeholder='Cidade'
+                {...register("cidade")}
+            />
+            <input className='inputForms' type="text" placeholder='Estado'
+                {...register("estado")}
+            />
+            <button>Confirmar</button>
         </form>
     );
 }

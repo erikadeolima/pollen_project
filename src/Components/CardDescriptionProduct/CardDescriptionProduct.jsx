@@ -1,11 +1,12 @@
 import React, { useContext, useEffect, useState } from 'react';
-import './CardPhotoProduct.css';
+import './CardDescriptionProduct.css';
 import storage from '../../Context/Context';
+
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 import { HiCurrencyDollar } from 'react-icons/hi';
 import { BsFillCartPlusFill } from 'react-icons/bs';
 
-function CardPhotoProduct({ id, name, src, pollen }) {
+function CardPhotoProduct({ id, name, src, pollens }) {
     const { newItem, total, cart, setTotal } = useContext(storage);
     const [favorite, setFavorite] = useState(false);
     const [item, setItem] = useState({});
@@ -39,15 +40,15 @@ function CardPhotoProduct({ id, name, src, pollen }) {
             id: id,
             name: name,
             src: src,
-            pollen: pollen,
+            pollens: pollens,
             quantity: unity,
-            subTotal: pollen * unity
+            subTotal: pollens * unity
         });
     };
 
     return (
         <div className="CardPhotoProduct">
-            <div id="CardPhoto">
+            <div className='heartIcon'>
                 {favorite ?
                     <i
                         className={"FillHeart"}
@@ -59,13 +60,18 @@ function CardPhotoProduct({ id, name, src, pollen }) {
                         className={"OutlineHeart"}
                         onClick={() => favoriteProduct()}>
                         {<AiOutlineHeart />}
-                    </i>}
+                    </i>
+                }
+            </div>
+            <div className='descriptionImg'>
                 <img src={src} alt={name} />
-                <h4>{name}</h4>
-                <div>
-                    <i>{HiCurrencyDollar}</i>
-                    <h5>{pollen}</h5>
-                    <button onClick={addInCart}>{< BsFillCartPlusFill />}</button>
+            </div>
+            <div className='descriptionTxt'>
+                <p>{name}</p>
+                <div className='productShop'>
+                    <HiCurrencyDollar className='cardIcon' />
+                    <p>{pollens} pollens</p>
+                    < BsFillCartPlusFill className='cardIcon addProduct' onClick={addInCart} />
                 </div>
             </div>
         </div>

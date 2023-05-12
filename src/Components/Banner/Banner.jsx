@@ -7,7 +7,7 @@ function Banner() {
     return(
         <div className="homepageBanner">
             <div className="bannerHomepageTxt">
-                <p>acumule pontos <br/> e troque por produtos <br/> da Bees</p>
+                <p>acumule pontos <br/> e troque por produtos <br/> da Pollen Points</p>
                 <Link to='/Sobre' className="removeStyle">
                     <label>saiba mais</label>
                 </Link>            
