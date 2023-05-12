@@ -6,13 +6,24 @@ import PrimaryButton from '../../Components/PrimaryButton/PrimaryButton';
 import Input from '../../Components/Input/Input';
 
 
+
+
+
+
+
+
+
+
 function MinhaConta() {
+    
+    
     const { pollenBalance, getPollenBalance } = useContext(storage);
+
 
     useEffect(() => {
         getPollenBalance();
     }, []);
-
+    
     return (
         <div className='mainContainer minha_conta'>
             <div className='titulo'>
@@ -82,10 +93,13 @@ function MinhaConta() {
             <Input/>
             {/* <textarea name="mensagem" id="" cols="30" rows="5"></textarea> */}
             <div className='btn-enviar'>
-            <PrimaryButton btn="Enviar"/>
+            <PrimaryButton 
+            title="minha_conta"
+            btn="Enviar"/>
             </div>
         </div>
     )
 };
 
-export default MinhaConta
+
+export default MinhaConta;
