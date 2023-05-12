@@ -3,6 +3,7 @@ import './MinhaConta.css';
 import Line from '../../Components/Line/Line';
 import Table from '../../Components/Table/Table';
 import storage from '../../Context/Context';
+import PrimaryButton from '../../Components/PrimaryButton/PrimaryButton';
 
 function MinhaConta() {
     const { pollenBalance, getPollenBalance } = useContext(storage);
@@ -61,7 +62,7 @@ function MinhaConta() {
                 <input type="e-mail" name="" id="emailPresente" className='input' />
                 <label htmlFor="quantidadePólens">Quantos pólens deseja enviar?</label>
                 <input type="number" name="" id="quantidadePólens" className='input' />
-                <button>Enviar</button>
+                <PrimaryButton btn="Enviar"/>
             </div>
         </div>
     )

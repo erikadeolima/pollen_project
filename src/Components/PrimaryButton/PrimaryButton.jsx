@@ -1,9 +1,12 @@
 import React from "react";
 import './PrimaryButton.css';
+import { Link } from "react-router-dom";
 
-function PrimaryButton() {
+function PrimaryButton(props) {
     return(
-        <div></div>
+        <div className="primaryButton">
+           <Link><button>{props.btn}</button></Link>
+        </div>
     );
 }
 

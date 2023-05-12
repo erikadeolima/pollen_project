@@ -1,5 +1,5 @@
 .line {
-    width: 90%;
+    max-width: 100%;
     border: solid 1px;
 
 }

@@ -1,7 +1,10 @@
 import React, { useState } from 'react';
 import './MeuCarrinho.css';
+
 import CardProductPhoto from '../../Components/CardProductPhoto/CardProductPhoto';
 import FormEntrega from '../../Components/FormEntrega/FormEntrega';
+import Line from '../../Components/Line/Line';
+import Input from '../../Components/Input/Input';
 
 
 function MeuCarrinho() {
@@ -12,29 +15,30 @@ function MeuCarrinho() {
     };
 
     return (
-        <div className=' mainContainer MeuCarrinho'>
-            <CardProductPhoto
-            />
-            {/* props */}
-            <div>
+        <div className=' mainContainer'>
+            <div className='photoAndTxtContainer'>
+                <CardProductPhoto />
+                <div>
+                    <h3 className='ProductName'>Nome do Produto</h3>
+                    <Line />
+                    <p>Preço</p>
+                    <label>Quantidade:</label>
+                    <br/>
+                    <Input />
 
-
-                <h3>Envio</h3>
-                <label>
+                    <h2>Envio</h2>
                     <input type="checkbox" />
                     Desejo Retirar no escritório do Bees
-                </label>
-                <label>
+                    <br/>
                     <input
                         type="checkbox"
                         checked={desejaReceberEmCasa}
                         onChange={handleDesejaReceberEmCasaChange}
                     />
                     Desejo Receber em Casa
-                </label>
+                </div>
             </div>
-            {desejaReceberEmCasa && <FormEntrega />}
-            <button>Confirmar</button>
+            {desejaReceberEmCasa && <FormEntrega />}            
         </div>
     )
 };
