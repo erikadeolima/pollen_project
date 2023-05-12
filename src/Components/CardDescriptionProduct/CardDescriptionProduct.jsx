@@ -6,7 +6,7 @@ import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 import { HiCurrencyDollar } from 'react-icons/hi';
 import { BsFillCartPlusFill } from 'react-icons/bs';
 
-function CardPhotoProduct({ id, name, src, pollen }) {
+function CardPhotoProduct({ id, name, src, pollens }) {
     const { newItem, total, cart, setTotal } = useContext(storage);
     const [favorite, setFavorite] = useState(false);
     const [item, setItem] = useState({});
@@ -40,9 +40,9 @@ function CardPhotoProduct({ id, name, src, pollen }) {
             id: id,
             name: name,
             src: src,
-            pollen: pollen,
+            pollens: pollens,
             quantity: unity,
-            subTotal: pollen * unity
+            subTotal: pollens * unity
         });
     };
 
@@ -70,7 +70,7 @@ function CardPhotoProduct({ id, name, src, pollen }) {
                 <p>{name}</p>
                 <div className='productShop'>
                     <HiCurrencyDollar className='cardIcon' />
-                    <p>{pollen} pólens</p>
+                    <p>{pollens} pollens</p>
                     < BsFillCartPlusFill className='cardIcon addProduct' onClick={addInCart} />
                 </div>
             </div>

@@ -4,7 +4,7 @@ import './CardProductPhoto.css';
 function CardDescriptionProduct(props) {
     return (
         <div className="productPhoto">
-            <img src={props.scr} alt="Foto do Produto" />
+            <img src={props.src} alt="Foto do Produto" />
         </div>
     );
 }
