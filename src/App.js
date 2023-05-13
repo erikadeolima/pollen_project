@@ -7,7 +7,6 @@ import Header from './Components/Header/Header';
 import Homepage from './Pages/Homepage/Homepage';
 import MeuCarrinho from './Pages/MeuCarrinho/MeuCarrinho';
 import MinhaConta from './Pages/MinhaConta/MinhaConta';
-import Resumo from './Pages/Resumo/Resumo';
 import Sobre from './Pages/Sobre/Sobre';
 
 function App() {
@@ -20,7 +19,6 @@ function App() {
             <Route path='/' element={<Homepage />} />
             <Route path='/MeuCarrinho' element={<MeuCarrinho />} />
             <Route path='/MinhaConta' element={<MinhaConta />} />
-            <Route path='/Resumo' element={<Resumo />} />
             <Route path='/Sobre' element={<Sobre />} />
           </Routes>
         </Router>

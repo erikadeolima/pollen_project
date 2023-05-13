@@ -9,7 +9,7 @@ function Provider({ children }) {
   const [pollenBalance, setPollenBalance] = useState(0);
   const [orderHistory, setOrderHistory] = useState([]);
   const [products, setProducts] = useState([]);
-  const [total, setTotal] = useState('0,00');
+  const [total, setTotal] = useState(0);
   const [cart, setCart] = useState([]);
 
   const getUserName = () => {
@@ -18,8 +18,8 @@ function Provider({ children }) {
   };
 
   const getPollenBalance = () => {
-    const pollen = userInfo.pollenBalance;
-    setPollenBalance(pollen);
+    const pollens = userInfo.pollenBalance;
+    setPollenBalance(pollens);
   };
 
   const getOrderHistory = () => {
@@ -30,20 +30,6 @@ function Provider({ children }) {
   const getProducts = () => {
     const products = productsInfo;
     setProducts(products);
-  }
-
-  const updatePollenBalance = (pollens) => {
-    setPollenBalance(pollens);
-  };
-
-  const updateOrderHistory = (order) => {
-    setOrderHistory(order);
-    /* setOrderHistory((prevState) => {
-      return {
-        ...prevState,
-        order
-      };
-    }); */
   };
   const getCartItem = () => {
     const cartItens = JSON.parse(localStorage.getItem('cart'));
@@ -57,7 +43,7 @@ function Provider({ children }) {
   const newItem = (item) => {
     const getCartProducts = getCartItem() || [];
     const itemAlreadySave = getCartProducts.find(
-      (productItem) => productItem.productId === item.productId,
+      (productItem) => productItem.id === item.id,
     );
     if (getCartProducts.length === 0) {
       setCart([item]);
@@ -66,7 +52,7 @@ function Provider({ children }) {
 
     if (itemAlreadySave) {
       getCartProducts.forEach((arrayItem) => {
-        if (arrayItem.productId === item.productId) {
+        if (arrayItem.id === item.id) {
           arrayItem.quantity = item.quantity;
           arrayItem.subTotal = item.subTotal;
         }
@@ -87,15 +73,14 @@ function Provider({ children }) {
     getUserName,
     getPollenBalance,
     getOrderHistory,
-    updateOrderHistory,
-    updatePollenBalance,
     getProducts,
     products,
     total,
     setTotal,
     cart,
     setCart,
-    newItem
+    newItem,
+    getCartItem
   };
 
   return (

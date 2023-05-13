@@ -1,16 +1,10 @@
-.tituloPolens{
+.photoAndTxtContainer {
     display: flex;
-    justify-content:right;
-    padding-right: 50px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 2em;
 }
 
-.tituloPedidos{
-    padding-left: 50px;
-    
-}
-
-.tableCarrinho{
-    margin: 0px 100px ;
-    
-    width: 800px;
+.ProductName {
+    font-size: 2em;
 }

@@ -1,12 +1,13 @@
 import React, { useContext, useEffect, useState } from 'react';
-import './CardPhotoProduct.css';
+import './CardDescriptionProduct.css';
 import storage from '../../Context/Context';
+
 import { AiFillHeart, AiOutlineHeart } from 'react-icons/ai';
 import { HiCurrencyDollar } from 'react-icons/hi';
 import { BsFillCartPlusFill } from 'react-icons/bs';
 
-function CardPhotoProduct({ id, name, src, pollen }) {
-    const { newItem } = useContext(storage);
+function CardPhotoProduct({ id, name, src, pollens }) {
+    const { newItem, total, cart, setTotal } = useContext(storage);
     const [favorite, setFavorite] = useState(false);
     const [item, setItem] = useState({});
     const [unity, setUnity] = useState(1);
@@ -25,24 +26,33 @@ function CardPhotoProduct({ id, name, src, pollen }) {
         }
     }, [item]);
 
+    useEffect(() => {
+        if (cart) {
+            const totalValue = cart
+                .reduce((acc, crr) => (acc + crr.subTotal), 0);
+            setTotal(totalValue);
+        };
+    }, [cart, total, setTotal]);
+
     const addInCart = () => {
         setUnity(unity + 1);
-        console.log(unity);
         setItem({
             id: id,
             name: name,
             src: src,
-            pollen: pollen,
+            pollens: pollens,
             quantity: unity,
+            subTotal: pollens * unity
         });
+        // alert("Produto enviado para o carrinho!")
     };
 
     return (
         <div className="CardPhotoProduct">
-            <div id="CardPhoto">
+            <div className='heartIcon'>
                 {favorite ?
                     <i
-                        className={favorite && "FillHeart"}
+                        className={"FillHeart"}
                         onClick={() => favoriteProduct()}>
                         {< AiFillHeart />}
                     </i>
@@ -51,13 +61,19 @@ function CardPhotoProduct({ id, name, src, pollen }) {
                         className={"OutlineHeart"}
                         onClick={() => favoriteProduct()}>
                         {<AiOutlineHeart />}
-                    </i>}
+                    </i>
+                }
+            </div>
+            <div className='descriptionImg'>
                 <img src={src} alt={name} />
-                <h4>{name}</h4>
-                <div>
-                    <i>{HiCurrencyDollar}</i>
-                    <h5>{pollen}</h5>
-                    <button onClick={addInCart}>{< BsFillCartPlusFill />}</button>
+            </div>
+            <div className='descriptionTxt'>
+                <p>{name}</p>
+                <div className='productShop'>
+                    <HiCurrencyDollar className='cardIcon' />
+                    <p>{pollens} pollens</p>
+                    < BsFillCartPlusFill className='cardIcon addProduct' onClick={() => addInCart()} />
+
                 </div>
             </div>
         </div>

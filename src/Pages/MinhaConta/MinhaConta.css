@@ -1,0 +1,65 @@
+.titulo {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    font-size:23px ;
+
+}
+
+.line {
+    width: 100%;
+    height: 1px;
+    background-color: black;
+    margin: 0 auto;
+}
+
+.tituloPedidos {
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+}
+
+.table {
+    display: flex;
+    width: 100%;
+    height: 248px;
+    background: #FFFFFF;
+    box-shadow: 0px 4px 4px rgba(0, 0, 2, 0.25);
+    border-radius: 25px;
+    border-spacing: 25px;
+  }
+
+td {
+    padding-top: 10px;
+    padding-bottom: 0px;
+    padding-left: 150px;
+    padding-right: 150px;
+    align-items: center;
+}
+
+.transfira {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    margin-top: 32px;
+}
+
+.meuinput{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.presente{
+    display: flex;
+    flex-direction: column;
+    padding-right: 6rem;
+}
+
+.polensEnviar{
+    display: flex;
+    flex-direction: column;
+}

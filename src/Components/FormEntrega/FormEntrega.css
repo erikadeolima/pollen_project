@@ -1,5 +1,5 @@
-.inputFormsSm {
-    width: 70px;
+.inputForms {
+    width: 300px;
     border: none;
     box-shadow: inset 2px 5px 10px rgb(228, 224, 224);
     border-radius: 24px;
@@ -9,6 +9,6 @@
     margin: 1em 1em 1em 0;
 }
 
-.inputFormsSm:focus {
+.inputForms:focus {
     color: #000;
 }

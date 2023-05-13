@@ -13,16 +13,18 @@ function Header() {
                     <img className="logo" src={logo} alt="Logo do site. Uma moeda amarela com a letra P e algumas abelhas" />
                 </Link>
                 <Link to="/" className='removeStyle'>
-                    <h1 className='nameSiteHeader'>Pólens</h1>
+                    <h1 className='nameSiteHeader'>PollenPoints</h1>
                 </Link>
             </div>
             <div className='menu-itens'>
+                <Link to="/Sobre" className='removeStyle'>
+                    <p>sobre nós</p>
+                </Link>
                 <Link to="/MinhaConta" className='removeStyle'>
-                    <p className='font-md'>minha conta</p>
+                    <p>minha conta</p>
                 </Link>
                 <Link to="/MeuCarrinho" className='removeStyle'>
-                    {/* <AiOutlineShoppingCart /> */}
-                    <p className='font-md'>meu carrinho</p>
+                    <p>meu carrinho</p>
                 </Link>
             </div>        
         </header>
