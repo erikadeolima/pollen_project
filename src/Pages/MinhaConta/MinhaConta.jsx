@@ -3,7 +3,7 @@ import './MinhaConta.css';
 import Line from '../../Components/Line/Line';
 import storage from '../../Context/Context';
 import PrimaryButton from '../../Components/PrimaryButton/PrimaryButton';
-import Input from '../../Components/Input/Input';
+import InputMd from '../../Components/InputMd/InputMd';
 
 
 
@@ -79,18 +79,18 @@ function MinhaConta() {
             <div className='meuinput'>
             <div className='presente'>
                 <label htmlFor="emailPresente">Digite o e-mail da pessoa que vai receber os pollens:</label>
-                <Input/>
+                <InputMd/>
             </div>
                 {/* <input type="e-mail" name="" id="emailPresente" className='input' /> */}
             <div className='polensEnviar'>
                 <label htmlFor="quantidadePólens">Quantos pollens deseja enviar?</label>
-                <Input/>
+                <InputMd/>
                 {/* <input type="number" name="" id="quantidadePólens" className='input' /> */}
             </div>
             </div>
                 
             <label htmlFor="mensagem">Deixe uma mensagem de carinho!</label>
-            <Input/>
+            <InputMd/>
             {/* <textarea name="mensagem" id="" cols="30" rows="5"></textarea> */}
             <div className='btn-enviar'>
             <PrimaryButton 

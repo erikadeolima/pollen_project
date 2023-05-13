@@ -1,0 +1,14 @@
+.inputFormsMd {
+    width: 300px;
+    border: none;
+    box-shadow: inset 2px 5px 10px rgb(228, 224, 224);
+    border-radius: 24px;
+    color: #a7a5a5;
+    padding: 20px 30px;
+    font-size: 1em;
+    margin: 1em 1em 1em 0;
+}
+
+.inputFormsMd:focus {
+    color: #000;
+}
