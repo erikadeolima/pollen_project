@@ -1,7 +1,7 @@
 # Pollen Project - Projeto Final de Formação AfroTech-BEES
 
 
-<img src="./imagens/home.jpg" width="400">
+<img src="./home.jpg" width="400">
 
 
 
