@@ -101,3 +101,8 @@
 > > > (E)Campo Cep
 > > > (E)Demais campos preenchidos automaticamente pela api
 > > > (E)Botão Finalizar
+> (P)Login
+>
+> > > (E)Inputs 
+> > > (E)Validação de Login
+> > > (E) Direcionamento para HomePage
